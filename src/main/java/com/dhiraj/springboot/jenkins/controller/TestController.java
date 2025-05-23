@@ -1,5 +1,7 @@
 package com.dhiraj.springboot.jenkins.controller;
 
+import java.time.LocalDate;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 	@GetMapping("/welcome")
 	public String welcomeMsg() {
-		return "Welcome to the Spring Boot Jenkins deploy example";
+		LocalDate str=LocalDate.now();
+		return "Welcome to the Spring Boot Jenkins deploy example" +"\n"+"server date and time" +str;
 	}
 	
 
